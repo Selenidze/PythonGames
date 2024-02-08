@@ -9,7 +9,7 @@ This README describes how to work with the ***PythonGames*** repository.
 
 ### How should I work with the repository? ###
 
-- Install the pygames library: `pip install pygame`
+- Install the pygame library: `pip install pygame`
 	
 ### Contribution guidelines ###
 
