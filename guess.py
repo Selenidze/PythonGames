@@ -10,7 +10,7 @@ number = random.randint(1, 20)
 print('Well, ' + myName + ', I am thinking of a number between 1 and 20.')
 
 for guessesTaken in range(7):
-    guessesTakenStr = str(guessesTaken)
+    guessesTakenStr = str(guessesTaken + 1)
     print('Take a guess №' + guessesTakenStr) # Four spaces in front of "print"
     guess = input()
     guess = int(guess)
