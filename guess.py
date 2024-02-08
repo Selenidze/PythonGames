@@ -1,5 +1,5 @@
 # This is a Guess the Number game.
-import random # another option 'from random import randit', then use 'randint()' instead 'random.randit()'
+import random # Another option is to use 'from random import randit', then use 'randint()' instead 'random.randit()'
 
 guessesTaken = 0
 
