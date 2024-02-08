@@ -4,12 +4,12 @@ This README describes how to work with the ***PythonGames*** repository.
 
 ### What is this repository for? ###
 
-- This repository contains python code.
 - ***Version 0.1***
+- This repository contains python code.
 
 ### How should I work with the repository? ###
 
-- Nothing here yet
+- Install the pygames library: `pip install pygame`
 	
 ### Contribution guidelines ###
 
