@@ -5,12 +5,11 @@ The code was taken from [Invent Your Own Computer Games with Python, 4th Edition
 
 ### What is this repository for? ###
 
-- ***Version 0.1***
-- This repository contains python code.
+- This is just a collection of games, written in python, from the great book.
 
 ### How should I work with the repository? ###
 
-- Install the pygame library: `pip install pygame`
+- Install the pygame library before running the code: `pip install pygame`
 	
 ### Contribution guidelines ###
 
