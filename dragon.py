@@ -12,7 +12,7 @@ def chooseCave():
     cave = ''
     while cave != '1' and cave != '2':
         print('Which cave will you go into? (1 or 2)')
-        cave = input()
+        cave = input('--> ')
 
     return cave
 
@@ -39,4 +39,4 @@ while playAgain == 'yes' or playAgain == 'y':
     checkCave(caveNumber)
 
     print('Do you want to play again? (yes or no)')
-    playAgain = input()
+    playAgain = input('--> ')
