@@ -1,5 +1,4 @@
 # This script removes numbers of lines from source code
-
 import re
 import fileinput
 
