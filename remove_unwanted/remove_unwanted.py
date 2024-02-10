@@ -4,8 +4,8 @@ import fileinput
 
 # Configuration
 textToSearchArray = [ 
-    '(\\s)?(\\d)+\\.\\n',               # Only a number of line
-    '(\\s)?(\\d)+\\.(\\s)?',            # A number of line and a text
+    '(\\s)*(\\d)+\\.\\n',               # Only a number of line
+    '(\\s)*(\\d)+\\.(\\s)?',            # A number of line and a text
 ]
 
 textToReplaceArray = [
