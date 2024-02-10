@@ -20,7 +20,7 @@ This code was taken from [Invent Your Own Computer Games with Python, 4th Editio
 
 * Owner: Pavel Bestavashvili 
 * Email: selenich@gmail.com
-* LinkedIn: [https://www.linkedin.com/in/pavelbestavashvili](https://https://www.linkedin.com/in/pavelbestavashvili)
+* LinkedIn: [https://www.linkedin.com/in/pavelbestavashvili](https://www.linkedin.com/in/pavelbestavashvili)
 
 ## Games ##
 1. [Guess the Number](https://github.com/Selenidze/PythonGames/blob/main/guess/guess.py)
