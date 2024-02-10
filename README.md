@@ -1,7 +1,8 @@
 # README #
 
 This README describes how to work with the ***PythonGames*** repository.  
-This code was taken from [Invent Your Own Computer Games with Python, 4th Edition](https://inventwithpython.com/invent4thed/) book.
+
+Most of the code was taken from [Invent Your Own Computer Games with Python, 4th Edition](https://inventwithpython.com/invent4thed/) book.
 
 ### What is this repository for? ###
 
