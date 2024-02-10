@@ -1,6 +1,6 @@
 # This script removes numbers of lines from source code
-import re
-import fileinput
+import re                               # A library for regex
+import fileinput                        # A library for work with files
 
 # Configuration
 textToSearchArray = [ 
