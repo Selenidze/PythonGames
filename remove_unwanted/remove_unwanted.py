@@ -3,17 +3,17 @@ import re                               # A library for regex
 import fileinput                        # A library for work with files
 
 # Configuration
-textToSearchArray = [ 
+textToSearchList = [ 
     '(\\s)*(\\d)+\\.\\n',               # Only a number of line
     '(\\s)*(\\d)+\\.(\\s)?',            # A number of line and a text
 ]
 
-textToReplaceArray = [
+textToReplaceList = [
     '\n',                               # A new line instead a number of line
     '',                                 # Just replace without a new line
 ]
 
-endOfLineArray = [
+endOfLineList = [
     '',                                 # Not add a new line
 ]
 
@@ -33,4 +33,4 @@ def main(textToSearch, textToReplace, endOfLine):
     input('\n\nPress Enter to exit...')
 
 if __name__ == "__main__": 
-    main(textToSearchArray, textToReplaceArray, endOfLineArray)
+    main(textToSearchList, textToReplaceList, endOfLineList)
