@@ -25,3 +25,4 @@ This code was taken from [Invent Your Own Computer Games with Python, 4th Editio
 1. [Guess the Number](https://github.com/Selenidze/PythonGames/blob/main/guess/guess.py)
 2. [A Joke-Telling Program](https://github.com/Selenidze/PythonGames/blob/main/jokes/jokes.py)
 3. [Dragon Realm](https://github.com/Selenidze/PythonGames/blob/main/dragon/dragon.py)
+4. [Hangman](https://github.com/Selenidze/PythonGames/blob/main/hangman/hangman.py)
