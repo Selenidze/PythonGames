@@ -21,7 +21,7 @@ This code was taken from [Invent Your Own Computer Games with Python, 4th Editio
 * Owner: Pavel Bestavashvili 
 * Email: selenich@gmail.com
 
-# Games #
+## Games ##
 1. [Guess the Number](https://github.com/Selenidze/PythonGames/blob/main/guess.py)
 2. [A Joke-Telling Program](https://github.com/Selenidze/PythonGames/blob/main/jokes.py)
 3. [Dragon Realm](https://github.com/Selenidze/PythonGames/blob/main/dragon.py)
