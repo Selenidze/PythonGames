@@ -4,6 +4,8 @@ This README describes how to work with the ***PythonGames*** repository.
 
 Most of the code was taken from [Invent Your Own Computer Games with Python, 4th Edition](https://inventwithpython.com/invent4thed/) book.
 
+If you are as lazy as I am and just want to copy the code from the book, please use [my script](https://github.com/Selenidze/PythonGames/blob/main/remove_unwanted/remove_unwanted.py) for removing unwanted elements from the code.
+
 ### What is this repository for? ###
 
 - This is just a collection of games, written in python, from the great book.
