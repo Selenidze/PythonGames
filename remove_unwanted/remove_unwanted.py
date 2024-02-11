@@ -1,36 +1,53 @@
-# This script removes numbers of lines from source code
+# This script removes unanted elements from source code
 import re                               # A library for regex
-import fileinput                        # A library for work with files
 
 # Configuration
-textToSearchList = [ 
-    '(\\s)*(\\d)+\\.\\n',               # Only a number of line
-    '(\\s)*(\\d)+\\.(\\s)?',            # A number of line and a text
+TEXTTOSEARCH = [ 
+    '^\\s+',                            # Line starts with one or more spaces
+    '^\\D',                             # Line doesn't start with a digit
+    '^\\d+\\.\\s?',                     # Line starts with one or more digits following a period and zero or one space
 ]
 
-textToReplaceList = [
-    '\n',                               # A new line instead a number of line
-    '',                                 # Just replace without a new line
+TEXTTOREPLACE= [
+    '',                                 # Nothing
+    ' ',                                # Space
 ]
 
-endOfLineList = [
-    '',                                 # Not add a new line
-]
+def delSequence (listOfStrings, textToSearch, textToReplace):
+    listOfStrings = [re.sub(textToSearch, textToReplace, line) for line in listOfStrings]  
+    return listOfStrings
 
-def editTextInFile(search, replace, filename, eol):
-    with fileinput.FileInput(filename, inplace=True, backup='.bak') as file:
-        for line in file:
-            print(re.sub(search, replace, line), end=eol)
+def joinStrings(listOfStrings, textToSearch, textToReplace):
+    listIndex = len(listOfStrings) - 1
 
-def main(textToSearch, textToReplace, endOfLine):
-      
+    for line in reversed(listOfStrings):
+        if re.match(textToSearch, line):
+            #print(str(listIndex) + '(CHANGE): ' + textToReplace.join(listOfStrings[listIndex-1 : listIndex+1]))
+            listOfStrings[listIndex-1 : listIndex+1] = [textToReplace.join(listOfStrings[listIndex-1 : listIndex+1])]
+       # else:
+           # print(str(listIndex) + ': ' + line)
+        listIndex -= 1
+
+    return listOfStrings
+
+def main(textToSearch, textToReplace):
     print("File to perform Search-Replace on:")
-    fileToSearch = input("--> ")
+    fileToChange = input("--> ")
 
-    editTextInFile(textToSearch[0], textToReplace[0], fileToSearch, endOfLine[0])
-    editTextInFile(textToSearch[1], textToReplace[1], fileToSearch, endOfLine[0])
+    with open(fileToChange) as fileTR:
+        listOfStrings = fileTR.read().splitlines()
+
+    listOfStrings = delSequence(listOfStrings, TEXTTOSEARCH[0], TEXTTOREPLACE[0])       # Removing spaces at the beginning of lines
+    listOfStrings = joinStrings(listOfStrings, TEXTTOSEARCH[1], TEXTTOREPLACE[1])       # Joining strings not starting with a digit 
+    listOfStrings = delSequence(listOfStrings, TEXTTOSEARCH[2], TEXTTOREPLACE[0])       # Removing numbers of lines
+
+    #print(*listOfStrings, sep = "\n")                                                  # Printing the list
+
+    with open(fileToChange, 'w') as fileTW:
+        for line in listOfStrings:
+           fileTW.write('%s\n' % line)                                                  # Write each item on a new line
 
     input('\n\nPress Enter to exit...')
 
 if __name__ == "__main__": 
-    main(textToSearchList, textToReplaceList, endOfLineList)
+    main(TEXTTOSEARCH, TEXTTOREPLACE)
