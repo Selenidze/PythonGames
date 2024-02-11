@@ -22,10 +22,7 @@ def joinStrings(listOfStrings, textToSearch, textToReplace):
 
     for line in reversed(listOfStrings):
         if re.match(textToSearch, line):
-            #print(str(listIndex) + '(CHANGE): ' + textToReplace.join(listOfStrings[listIndex-1 : listIndex+1]))
             listOfStrings[listIndex-1 : listIndex+1] = [textToReplace.join(listOfStrings[listIndex-1 : listIndex+1])]
-       # else:
-           # print(str(listIndex) + ': ' + line)
         listIndex -= 1
 
     return listOfStrings
