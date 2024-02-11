@@ -1,4 +1,4 @@
-# This script removes unanted elements from source code
+# This script removes unwanted elements from source code
 import re                               # A library for regex
 
 # Configuration
