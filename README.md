@@ -30,3 +30,5 @@ If you are as lazy as I am and just want to copy the code from the book, please 
 2. [A Joke-Telling Program](https://github.com/Selenidze/PythonGames/blob/main/jokes/jokes.py)
 3. [Dragon Realm](https://github.com/Selenidze/PythonGames/blob/main/dragon/dragon.py)
 4. [Hangman](https://github.com/Selenidze/PythonGames/blob/main/hangman/hangman.py)
+4. [Hangman 2](https://github.com/Selenidze/PythonGames/blob/main/hangman/hangman2.py)
+5. [Hangman](https://github.com/Selenidze/PythonGames/blob/main/tictactoe/tictactoe.py)
