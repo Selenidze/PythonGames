@@ -5,5 +5,6 @@ print('What is ' + str(number1) + ' + ' + str(number2) + '?')
 answer = input()
 if answer == number1 + number2:
 #if int(answer) == number1 + number2: # Here is the correction
+    print('Correct!')
 else:
     print('Nope! The answer is ' + str(number1 + number2))
