@@ -2,6 +2,17 @@
 
 import random
 
+WINNING_COMBINATIONS = {
+    1:[1, 2, 3],
+    2:[4, 5, 6],
+    3:[7, 8, 9],
+    4:[1, 4, 7],
+    5:[2, 5, 8],
+    6:[3, 6, 9],
+    7:[1, 5, 9],
+    8:[3, 5, 7],
+}
+
 def drawBoard(board):
     # This function prints out the board that it was passed.
 
@@ -35,6 +46,18 @@ def whoGoesFirst():
 
 def makeMove(board, letter, move):
     board[move] = letter
+
+def isWinnerPlus(board, letter):
+    # Improved version of isWinner() function
+    for combination in WINNING_COMBINATIONS:
+        counter = 0
+        
+        for index in range(3):
+            if board[WINNING_COMBINATIONS[combination][index]] == letter:
+                counter += 1
+        
+        if counter == 3:
+            return True
 
 def isWinner(bo, le):
     # Given a board and a player's letter, this function returns True if that player has won.
@@ -93,7 +116,7 @@ def getComputerMove(board, computerLetter):
         boardCopy = getBoardCopy(board)
         if isSpaceFree(boardCopy, i):
             makeMove(boardCopy, computerLetter, i)
-            if isWinner(boardCopy, computerLetter):
+            if isWinnerPlus(boardCopy, computerLetter):
                 return i
 
     # Check if the player could win on their next move and block them.
@@ -101,7 +124,7 @@ def getComputerMove(board, computerLetter):
         boardCopy = getBoardCopy(board)
         if isSpaceFree(boardCopy, i):
             makeMove(boardCopy, playerLetter, i)
-            if isWinner(boardCopy, playerLetter):
+            if isWinnerPlus(boardCopy, playerLetter):
                 return i
 
     # Try to take one of the corners, if they are free.
@@ -141,7 +164,7 @@ while True:
             move = getPlayerMove(theBoard)
             makeMove(theBoard, playerLetter, move)
 
-            if isWinner(theBoard, playerLetter):
+            if isWinnerPlus(theBoard, playerLetter):
                 drawBoard(theBoard)
                 print('Hooray! You have won the game!')
                 gameIsPlaying = False
@@ -158,7 +181,7 @@ while True:
             move = getComputerMove(theBoard, computerLetter)
             makeMove(theBoard, computerLetter, move)
 
-            if isWinner(theBoard, computerLetter):
+            if isWinnerPlus(theBoard, computerLetter):
                 drawBoard(theBoard)
                 print('The computer has beaten you! You lose.')
                 gameIsPlaying = False
