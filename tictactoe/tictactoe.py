@@ -3,7 +3,7 @@
 import random
 
 '''
-Here is the board with assosiated numbers (controls):
+Here is the board with associated numbers (controls):
 7|8|9
 -+-+-
 4|5|6
