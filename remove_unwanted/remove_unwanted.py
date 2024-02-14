@@ -43,7 +43,7 @@ def main(textToSearch, textToReplace):
 
     with open(fileToChange, 'w') as fileTW:
         for line in listOfStrings[:-1]:
-           fileTW.write('%s\n' % line)                                                  # Write each item on a new line and add \n at the end
+           fileTW.write('%s\n' % line)                                                  # Write each element add \n at the end
         fileTW.write('%s' % listOfStrings[-1])                                          # Don't add \n at the end of the last line
 
     input('\n\nPress Enter to exit...')
