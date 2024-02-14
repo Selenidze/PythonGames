@@ -2,6 +2,16 @@
 
 import random
 
+'''
+Here is the board with assosiated numbers (controls):
+7|8|9
+-+-+-
+4|5|6
+-+-+-
+1|2|3
+
+'''
+
 WINNING_COMBINATIONS = {
     1:[1, 2, 3],
     2:[4, 5, 6],
