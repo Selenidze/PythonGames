@@ -1,5 +1,4 @@
 # Tic-Tac-Toe
-
 import random
 
 WINNING_COMBINATIONS = {
