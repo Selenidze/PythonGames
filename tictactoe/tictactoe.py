@@ -2,16 +2,6 @@
 
 import random
 
-'''
-Here is the board with associated numbers (controls):
-7|8|9
--+-+-
-4|5|6
--+-+-
-1|2|3
-
-'''
-
 WINNING_COMBINATIONS = {
     1:[1, 2, 3],
     2:[4, 5, 6],
@@ -39,6 +29,8 @@ THREE_MOVES_COMBINATIONS = {
     2:[3, 5, 7],
 }
 
+CONTROLS = '0 1 2 3 4 5 6 7 8 9'.split()
+
 def drawBoard(board):
     # This function prints out the board that it was passed.
 
@@ -48,6 +40,7 @@ def drawBoard(board):
     print(board[4] + '|' + board[5] + '|' + board[6])
     print('-+-+-')
     print(board[1] + '|' + board[2] + '|' + board[3])
+    print('\n')
 
 def inputPlayerLetter():
     # Lets the player type which letter they want to be.
@@ -211,7 +204,9 @@ def isBoardFull(board):
     return True
 
 
-print('Welcome to Tic-Tac-Toe!')
+print('Welcome to Tic-Tac-Toe!\n')
+print('Here is the board with associated numbers (controls):\n')
+drawBoard(CONTROLS)
 
 while True:
     # Reset the board.
