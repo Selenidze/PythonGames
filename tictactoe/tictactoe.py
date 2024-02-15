@@ -23,6 +23,22 @@ WINNING_COMBINATIONS = {
     8:[3, 5, 7],
 }
 
+TWO_MOVES_COMBINATIONS = {
+    1:[1, 2, 3, 7],
+    2:[1, 4, 7, 3],
+    3:[3, 2, 1, 9],
+    4:[3, 6, 9, 1],
+    5:[7, 4, 1, 9],
+    6:[7, 8, 9, 1],
+    7:[9, 6, 3, 7],
+    8:[9, 8, 7, 3],
+}
+
+THREE_MOVES_COMBINATIONS = {
+    1:[1, 5, 9],
+    2:[3, 5, 7],
+}
+
 def drawBoard(board):
     # This function prints out the board that it was passed.
 
@@ -68,6 +84,19 @@ def isWinnerPlus(board, letter):
         
         if counter == 3:
             return True
+        
+def twoMovesCombinantions(board, moveList):
+    # Make some special move if we observe one of combinations
+    for combination in TWO_MOVES_COMBINATIONS:
+        if board[TWO_MOVES_COMBINATIONS[combination][0]] != ' ' and board[TWO_MOVES_COMBINATIONS[combination][1]] != ' ':
+            moveList.remove(TWO_MOVES_COMBINATIONS[combination][2])
+            return TWO_MOVES_COMBINATIONS[combination][3]
+
+def threeMovesCombinations(board):
+    # Check if we observe one of combinations
+    for combination in THREE_MOVES_COMBINATIONS:
+        if board[THREE_MOVES_COMBINATIONS[combination][0]] != ' ' and board[THREE_MOVES_COMBINATIONS[combination][1]] != ' ' and board[THREE_MOVES_COMBINATIONS[combination][2]] != ' ':
+            return True
 
 def isWinner(bo, le):
     # Given a board and a player's letter, this function returns True if that player has won.
@@ -92,6 +121,16 @@ def isSpaceFree(board, move):
     # Return True if the passed move is free on the passed board.
     return board[move] == ' '
 
+def movesMade(board):
+    # Check if only one move was made
+    counter = 0
+
+    for i in board:
+        if i == 'X' or i == 'O':
+            counter += 1
+
+    return counter       
+
 def getPlayerMove(board):
     # Let the player enter their move.
     move = ' '
@@ -113,7 +152,7 @@ def chooseRandomMoveFromList(board, movesList):
     else:
         return None
 
-def getComputerMove(board, computerLetter):
+def getComputerMove(board, computerLetter, computerMovesList):
     # Given a board and the computer's letter, determine where to move and return that move.
     if computerLetter == 'X':
         playerLetter = 'O'
@@ -137,8 +176,23 @@ def getComputerMove(board, computerLetter):
             if isWinnerPlus(boardCopy, playerLetter):
                 return i
 
+
+    # Making the computer unbeatable
+    if movesMade(board) == 1:
+        if isSpaceFree(board, 5):
+            return 5
+
+    if movesMade(board) == 2:
+        move = twoMovesCombinantions(board, computerMovesList['corners'])
+        if move != None:
+            return move
+        
+    if movesMade(board) == 3:
+        if threeMovesCombinations(board):
+            return chooseRandomMoveFromList(board, computerMovesList['sides'])
+
     # Try to take one of the corners, if they are free.
-    move = chooseRandomMoveFromList(board, [1, 3, 7, 9])
+    move = chooseRandomMoveFromList(board, computerMovesList['corners'])
     if move != None:
         return move
 
@@ -147,7 +201,7 @@ def getComputerMove(board, computerLetter):
         return 5
 
     # Move on one of the sides.
-    return chooseRandomMoveFromList(board, [2, 4, 6, 8])
+    return chooseRandomMoveFromList(board, computerMovesList['sides'])
 
 def isBoardFull(board):
     # Return True if every space on the board has been taken. Otherwise, return False.
@@ -166,6 +220,11 @@ while True:
     turn = whoGoesFirst()
     print('The ' + turn + ' will go first.')
     gameIsPlaying = True
+
+    computerMovesList = {
+        'corners':[1, 3, 7, 9],
+        'sides':[2, 4, 6, 8],
+    }
 
     while gameIsPlaying:
         if turn == 'player':
@@ -188,7 +247,7 @@ while True:
 
         else:
             # Computer's turn
-            move = getComputerMove(theBoard, computerLetter)
+            move = getComputerMove(theBoard, computerLetter, computerMovesList)
             makeMove(theBoard, computerLetter, move)
 
             if isWinnerPlus(theBoard, computerLetter):
