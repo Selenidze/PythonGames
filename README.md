@@ -33,3 +33,4 @@ If you are as lazy as I am and just want to copy the code from the book, please 
 4. [Hangman 2](https://github.com/Selenidze/PythonGames/blob/main/hangman/hangman2.py)
 5. [Tic-Tac-Toe](https://github.com/Selenidze/PythonGames/blob/main/tictactoe/tictactoe.py)
 6. [The Bagels Deduction Game](https://github.com/Selenidze/PythonGames/blob/main/bagels/bagels.py)
+7. [Sonar Treasure Hunt](https://github.com/Selenidze/PythonGames/blob/main/sonar/sonar.py)
