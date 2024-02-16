@@ -4,7 +4,7 @@ import re                               # A library for regex
 # Configuration
 TEXTTOSEARCH = [ 
     '^\\s+',                            # Line starts with one or more spaces
-    '^\\D',                             # Line doesn't start with a digit
+    '^(?!\\d+\\.)',                             # Line doesn't start with a digit
     '^\\d+\\.\\s?',                     # Line starts with one or more digits following a period and zero or one space
 ]
 
