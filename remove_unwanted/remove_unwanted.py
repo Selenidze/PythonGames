@@ -36,7 +36,7 @@ def main(textToSearch, textToReplace):
         listOfStrings = fileTR.read().splitlines()
 
     delSequence(listOfStrings, textToSearch[0], textToReplace[0])                       # Removing spaces at the beginning of lines
-    joinStrings(listOfStrings, textToSearch[1], textToReplace[1])                       # Joining strings not starting with a digit 
+    joinStrings(listOfStrings, textToSearch[1], textToReplace[1])                       # Joining strings not starting with a number of line 
     delSequence(listOfStrings, textToSearch[2], textToReplace[0])                       # Removing numbers of lines
 
     #print(*listOfStrings, sep = "\n")                                                  # Printing the list
