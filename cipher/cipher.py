@@ -1,5 +1,6 @@
 # Caesar Cipher
 SYMBOLS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
+#SYMBOLS = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯавбгдеёжзийклмнопрстуфхцчшщъыьэюя'
 MAX_KEY_SIZE = len(SYMBOLS)
 
 def getMode():
