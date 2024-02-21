@@ -34,3 +34,4 @@ If you are as lazy as I am and just want to copy the code from the book, please 
 6. [The Bagels Deduction Game](https://github.com/Selenidze/PythonGames/blob/main/bagels/bagels.py)
 7. [Sonar Treasure Hunt](https://github.com/Selenidze/PythonGames/blob/main/sonar/sonar.py)
 8. [Caesar Cipher](https://github.com/Selenidze/PythonGames/blob/main/cipher/cipher.py)
+9. [The Reversegam Game](https://github.com/Selenidze/PythonGames/blob/main/reversegam/reversegam.py)
