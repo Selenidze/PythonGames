@@ -44,12 +44,12 @@ def isValidMove(board, tile, xstart, ystart):
             y += ydirection
             if isOnBoard(x, y) and board[x][y] == tile:
                 # There are pieces to flip over. Go in the reverse direction until we reach the original space, noting all the tiles along the way.
-            while True:
-                x -= xdirection
-                y -= ydirection
-                if x == xstart and y == ystart:
-                    break
-                tilesToFlip.append([x, y])
+                while True:
+                    x -= xdirection
+                    y -= ydirection
+                    if x == xstart and y == ystart:
+                        break
+                    tilesToFlip.append([x, y])
 
     if len(tilesToFlip) == 0: # If no tiles were flipped, this is not a valid move.
         return False
