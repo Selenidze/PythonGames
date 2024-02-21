@@ -25,13 +25,12 @@ If you are as lazy as I am and just want to copy the code from the book, please 
 * Email: selenich@gmail.com
 * LinkedIn: [https://www.linkedin.com/in/pavelbestavashvili](https://www.linkedin.com/in/pavelbestavashvili)
 
-## Games ##
+## Games/Programs ##
 1. [Guess the Number](https://github.com/Selenidze/PythonGames/blob/main/guess/guess.py)
-2. [A Joke-Telling Program](https://github.com/Selenidze/PythonGames/blob/main/jokes/jokes.py)
-3. [Dragon Realm](https://github.com/Selenidze/PythonGames/blob/main/dragon/dragon.py)
-4. [Hangman](https://github.com/Selenidze/PythonGames/blob/main/hangman/hangman2.py)
-5. [Tic-Tac-Toe](https://github.com/Selenidze/PythonGames/blob/main/tictactoe/tictactoe.py)
-6. [The Bagels Deduction Game](https://github.com/Selenidze/PythonGames/blob/main/bagels/bagels.py)
-7. [Sonar Treasure Hunt](https://github.com/Selenidze/PythonGames/blob/main/sonar/sonar.py)
-8. [Caesar Cipher](https://github.com/Selenidze/PythonGames/blob/main/cipher/cipher.py)
-9. [The Reversegam Game](https://github.com/Selenidze/PythonGames/blob/main/reversegam/reversegam.py)
+2. [Dragon Realm](https://github.com/Selenidze/PythonGames/blob/main/dragon/dragon.py)
+3. [Hangman](https://github.com/Selenidze/PythonGames/blob/main/hangman/hangman2.py)
+4. [Tic-Tac-Toe](https://github.com/Selenidze/PythonGames/blob/main/tictactoe/tictactoe.py)
+5. [The Bagels Deduction Game](https://github.com/Selenidze/PythonGames/blob/main/bagels/bagels.py)
+6. [Sonar Treasure Hunt](https://github.com/Selenidze/PythonGames/blob/main/sonar/sonar.py)
+7. [Caesar Cipher](https://github.com/Selenidze/PythonGames/blob/main/cipher/cipher.py)
+8. [The Reversegam Game](https://github.com/Selenidze/PythonGames/blob/main/reversegam/reversegam.py)
